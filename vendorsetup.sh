@@ -1,0 +1,2 @@
+add_lunch_combo cm_nanhu_ds-eng
+add_lunch_combo cm_nanhu_ds-userdebug

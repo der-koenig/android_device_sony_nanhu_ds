@@ -1,0 +1,21 @@
+[
+  {
+    "repository": "android_device_sony_nanhu",
+    "target_path": "device/sony/nanhu_ds",
+    "branch": "jellybean-3.4"
+ },
+  {
+    "repository": "android_device_sony_tamsui-common",
+    "target_path": "device/sony/tamsui-common",
+    "branch": "jellybean-3.4"
+ },
+ {
+    "repository": "android_kernel_sony_msm7x27a",
+    "target_path": "kernel/sony/msm7x27a",
+    "branch": "jellybean-3.4"
+ },
+ {
+    "repository": "android_hardware_atheros_wlan",
+    "target_path": "hardware/atheros/wlan"
+  }
+]
