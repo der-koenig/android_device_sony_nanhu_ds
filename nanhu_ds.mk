@@ -97,5 +97,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ##nanhu: persist.radio.apm_sim_not_pwdn 1 \
     #ro.kernel.android.checkjni=0
 
+ifneq ($(SIGNING_KEY_DIR),)
+PRODUCT_OTA_PUBLIC_KEYS += $(SIGNING_KEY_DIR)/ota.x509.pem
+endif
+
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
