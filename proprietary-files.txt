@@ -11,6 +11,7 @@ bin/nvcustomizer
 bin/thermald
 bin/wiperiface
 bin/netmgrd
+bin/fm_qsoc_patches
 bin/fmconfig
 etc/firmware/ath6k/AR6003/hw2.1.1/softmac
 etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin
@@ -109,6 +110,7 @@ lib/libOmxEvrcHwDec.so
 lib/hw/gps.default.so
 lib/hw/sensors.default.so
 lib/hw/camera.msm7x27a.so
+lib/hw/hwalloc.msm7x27a.so
 lib/libloc_ext.so
 lib/libauth.so
 lib/libdiag.so
