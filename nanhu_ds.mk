@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += FM
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    config/plmn-conf.xml:system/etc/plmn-conf.xml
+    device/sony/nanhu_ds/config/plmn-conf.xml:system/etc/plmn-conf.xml
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
