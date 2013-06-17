@@ -8,6 +8,7 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/nanhu_ds/include
 
+TARGET_KERNEL_SOURCE := kernel/sony/nanhu_ds
 TARGET_KERNEL_CONFIG := cm_nanhu_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/nanhu_ds/config/cmdline.txt
 
