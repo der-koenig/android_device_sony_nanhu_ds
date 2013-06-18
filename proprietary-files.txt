@@ -110,7 +110,7 @@ lib/libOmxEvrcHwDec.so
 lib/hw/gps.default.so
 lib/hw/sensors.default.so
 lib/hw/camera.msm7x27a.so
-lib/hw/hwalloc.msm7x27a.so
+lib/hw/hwcomposer.msm7x27a.so
 lib/libloc_ext.so
 lib/libauth.so
 lib/libdiag.so
