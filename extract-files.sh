@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=sony
-DEVICE=nanhu_ds
+DEVICE=nanhu
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 

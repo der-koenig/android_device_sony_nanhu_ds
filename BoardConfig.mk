@@ -1,22 +1,22 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/sony/nanhu_ds/BoardConfigVendor.mk
+-include vendor/sony/nanhu/BoardConfigVendor.mk
 
 #inherit from the common tamsui definitions
 -include device/sony/tamsui-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/nanhu_ds/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/nanhu/include
 
-TARGET_KERNEL_SOURCE := kernel/sony/nanhu_ds
+TARGET_KERNEL_SOURCE := kernel/sony/nanhu
 TARGET_KERNEL_CONFIG := cm_nanhu_defconfig
-BOARD_KERNEL_CMDLINE := device/sony/nanhu_ds/config/cmdline.txt
+BOARD_KERNEL_CMDLINE := device/sony/nanhu/config/cmdline.txt
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 17
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/sony/nanhu_ds/recovery/init.rc
+TARGET_RECOVERY_INITRC := device/sony/nanhu/recovery/init.rc
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 681574400
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
@@ -31,7 +31,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_CSR := true
-TARGET_CUSTOM_BLUEDROID := ../../../device/sony/nanhu_ds/bluedroid/bluetooth.c
+TARGET_CUSTOM_BLUEDROID := ../../../device/sony/nanhu/bluedroid/bluetooth.c
 
 # Wifi
 #BOARD_HAVE_QCOM_FM := true
@@ -49,7 +49,7 @@ WIFI_DRIVER_LOADER_DELAY := 1000000
 BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p17
 
 # Custom vibrator
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/sony/nanhu_ds/vibrator/vibrator.c
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/sony/nanhu/vibrator/vibrator.c
 
 TARGET_OTA_ASSERT_DEVICE := C1504,C1505,C1604,C1605,nanhu,nanhu_ds
 
