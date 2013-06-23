@@ -25,7 +25,9 @@ $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-PRODUCT_PACKAGES += FM
+PRODUCT_PACKAGES += \
+    FM \
+    OTAUpdateCenter
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
