@@ -63,9 +63,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device
 
-PRODUCT_COPY_FILES += \
-    device/sony/nanhu_ds/prebuilt/fm_qsoc_patches:system/bin/fm_qsoc_patches
-
 # Offline charging
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/prebuilt/charger:root/charger \
