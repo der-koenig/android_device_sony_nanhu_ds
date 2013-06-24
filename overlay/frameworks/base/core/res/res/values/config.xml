@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Boolean indicating whether Softap requires reloading AP firmware -->
+    <bool name="config_wifiApFirmwareReload">false</bool>
+
+    <!-- Boolean indicating whether the start command should be called on the wireless interface
+         when starting the SoftAp -->
+    <bool name="config_wifiApStartInterface">false</bool>
+</resources>
