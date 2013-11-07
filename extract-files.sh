@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 VENDOR=sony
 DEVICE=nanhu_ds
@@ -22,12 +22,27 @@ then
     rm -rf $BASE/*
 fi
 
-for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
-    DIR=`dirname $FILE`
-    if [ ! -d $BASE/$DIR ]; then
-        mkdir -p $BASE/$DIR
-    fi
-    adb pull /system/$FILE $BASE/$FILE
+for FILE in `cat ../$DEVICE/proprietary-files.txt | grep -v ^# | grep -v ^$`
+do
+  # Split the file from the destination (format is "file[:destination]")
+  OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
+  FILE=${PARSING_ARRAY[0]}
+  DEST=${PARSING_ARRAY[1]}
+  if [ -z $DEST ]
+  then
+    DEST=$FILE
+  fi
+  DIR=`dirname $FILE`
+  if [ ! -d $BASE/$DIR ]
+  then
+    mkdir -p $BASE/$DIR
+  fi
+  adb pull /system/$FILE $BASE/$DEST
+  # if file dot not exist try destination
+  if [ "$?" != "0" ]
+  then
+    adb pull /system/$DEST $BASE/$DEST
+  fi
 done
 
 ./setup-makefiles.sh

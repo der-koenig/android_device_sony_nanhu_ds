@@ -34,10 +34,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     device/sony/nanhu_ds/config/plmn-conf.xml:system/etc/plmn-conf.xml
 
-# This device is xhdpi.  However the platform doesn't
-# currently contain all of the bitmaps at xhdpi density so
-# we do this little trick to fall back to the hdpi version
-# if the xhdpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal mdpi mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 

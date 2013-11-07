@@ -16,6 +16,17 @@ on post-fs-data
 
     insmod /system/lib/modules/cfg80211.ko
 
+#Compass Fix
+    # Magnetic device
+    chown system system /sys/class/compass/magnetic/enable_acc
+    chown system system /sys/class/compass/magnetic/enable_mag
+    chown system system /sys/class/compass/magnetic/enable_ori
+    chown system system /sys/class/compass/magnetic/delay_acc
+    chown system system /sys/class/compass/magnetic/delay_mag
+    chown system system /sys/class/compass/magnetic/delay_ori
+    chown system system /sys/class/compass/magnetic/accel
+    chown system system /sys/class/compass/magnetic/get_device_infor  
+
 on early-charger
     wait /dev/block/mmcblk0p2
     start tad
@@ -48,4 +59,10 @@ service tad /sbin/tad /dev/block/mmcblk0p2 0,16,256
 
 service charger /charger
     class charger
+
+# Magnetic service
+service akmd /system/bin/magnetic -m 2
+    class main
+    user compass
+    group system
 
