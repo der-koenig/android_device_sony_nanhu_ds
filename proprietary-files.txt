@@ -16,7 +16,9 @@ etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/softmac
 lib/hw/camera.msm7627a.so:lib/hw/camera.msm7x27a.so
+lib/hw/copybit.msm7627a.so:lib/hw/copybit.msm7x27a.so
 lib/hw/gps.default.so:lib/hw/gps.msm7x27a.so
+lib/hw/hwcomposer.msm7627a.so:lib/hw/hwcomposer.msm7x27a.so
 lib/hw/sensors.msm7627a.so:lib/hw/sensors.msm7x27a.so
 lib/libOmxAacDec.so
 lib/libOmxAacEnc.so
