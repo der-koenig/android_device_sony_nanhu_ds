@@ -58,7 +58,8 @@ PRODUCT_COPY_FILES += \
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
-    device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device
+    device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device \
+    device/sony/nanhu_ds/recovery/ramdisk-cwm.cpio:recovery/ramdisk-cwm.cpio
 
 # Offline charging
 PRODUCT_COPY_FILES += \
