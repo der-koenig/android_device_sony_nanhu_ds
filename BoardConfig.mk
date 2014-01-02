@@ -14,12 +14,12 @@ BOARD_KERNEL_CMDLINE := device/sony/nanhu_ds/config/cmdline.txt
 BOARD_VOLD_MAX_PARTITIONS := 17
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/sony/nanhu_ds/recovery/init.rc
+TARGET_RECOVERY_FSTAB := device/sony/nanhu_ds/config/fstab.sony
+RECOVERY_FSTAB_VERSION := 2
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 681574400
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_CUSTOM_BOOTIMG_MK := device/sony/nanhu_ds/custombootimg.mk
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"

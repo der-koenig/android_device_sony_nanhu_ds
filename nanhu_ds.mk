@@ -53,13 +53,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/fstab.sony:root/fstab.sony
 
-PRODUCT_COPY_FILES += \
-    device/sony/nanhu_ds/config/vold.fstab:system/etc/vold.fstab
-
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
-    device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device \
-    device/sony/nanhu_ds/recovery/ramdisk-cwm.cpio:recovery/ramdisk-cwm.cpio
+    device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device
 
 # Offline charging
 PRODUCT_COPY_FILES += \
