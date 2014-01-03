@@ -9,7 +9,7 @@
 
 ## Vold managed volumes ##
 /devices/platform/msm_sdcc.3/mmc_host/mmc0	/storage/sdcard0	auto	defaults									voldmanaged=sdcard:17,nonremovable,noemulatedsd
-/devices/platform/msm_sdcc.1/mmc_host		/storage/sdcard1	auto	defaults									voldmanaged=sdcard:auto
+/devices/platform/msm_sdcc.1/mmc_host		/storage/sdcard1	auto	defaults									voldmanaged=sdcard1:auto
 
 ## Recovery only ##
 /dev/block/mmcblk0p3				/boot			emmc	defaults									recoveryonly
