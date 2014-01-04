@@ -24,7 +24,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array name="entries_brightness_widget" formatted="false" translatable="false">
-        <item>@string/cm_brightness_mode_dim</item>
+        <item>10%</item>
         <item>25%</item>
         <item>50%</item>
         <item>75%</item>
