@@ -29,6 +29,8 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"font_7x16.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
+BOARD_CUSTOM_BOOTIMG_MK := device/sony/nanhu_ds/custombootimg.mk
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_CSR := true
 TARGET_CUSTOM_BLUEDROID := ../../../device/sony/nanhu_ds/bluedroid/bluetooth.c
