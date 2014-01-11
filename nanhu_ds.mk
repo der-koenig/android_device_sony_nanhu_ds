@@ -53,6 +53,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/fstab.sony:root/fstab.sony
 
+PRODUCT_COPY_FILES += \
+    device/sony/nanhu_ds/config/vold.fstab:system/etc/vold.fstab
+
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device
