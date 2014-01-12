@@ -90,8 +90,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.strictmode.visual=0 \
     persist.sys.strictmode.disable=1 \
     persist.radio.apm_sim_not_pwdn=0 \
-    ##nanhu: persist.radio.apm_sim_not_pwdn 1 \
-    #ro.kernel.android.checkjni=0
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
