@@ -14,54 +14,9 @@ on post-fs-data
     chown system system /sys/class/leds/lm3533-light-button/brightness
     chmod 0660 /sys/class/leds/lm3533-light-button/brightness
 
-    insmod /system/lib/modules/cfg80211.ko
-
-#Compass Fix
-    # Magnetic device
-    chown system system /sys/class/compass/magnetic/enable_acc
-    chown system system /sys/class/compass/magnetic/enable_mag
-    chown system system /sys/class/compass/magnetic/enable_ori
-    chown system system /sys/class/compass/magnetic/delay_acc
-    chown system system /sys/class/compass/magnetic/delay_mag
-    chown system system /sys/class/compass/magnetic/delay_ori
-    chown system system /sys/class/compass/magnetic/accel
-    chown system system /sys/class/compass/magnetic/get_device_infor  
-
-on early-charger
-    wait /dev/block/mmcblk0p2
-    start tad
-    exec /sbin/wait4tad
-    start rmt_storage
-    start ta_rmt_service
-
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 0FCE
-    write /sys/class/android_usb/android0/idProduct E188
-    write /sys/class/android_usb/android0/functions mass_storage
-    write /sys/class/android_usb/android0/enable 1
-
-on charger
-    start charger
-
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
     group qcom_oncrpc bluetooth net_bt_admin
     disabled
     oneshot
-
-# SEMC, TA Daemon
-service tad /sbin/tad /dev/block/mmcblk0p2 0,16,256
-    class trimarea
-    user root
-    group root
-    socket tad stream 0660 system system
-
-service charger /charger
-    class charger
-
-# Magnetic service
-service akmd /system/bin/magnetic -m 2
-    class main
-    user compass
-    group system

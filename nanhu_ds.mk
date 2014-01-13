@@ -25,10 +25,6 @@ $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-PRODUCT_PACKAGES += \
-    FM \
-    OTAUpdateCenter
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -81,15 +77,4 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
     device/sony/nanhu_ds/config/cy8ctma340_touch.kl:system/usr/keylayout/cy8ctma340_touch.kl
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.multisim.config=dsds \
-    persist.radio.eons.enabled=true \
-    ro.arima.imeisv=45 \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so \
-    ro.telephony.call_ring.multiple=false \
-    persist.sys.strictmode.visual=0 \
-    persist.sys.strictmode.disable=1 \
-    persist.radio.apm_sim_not_pwdn=0 \
-
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
-

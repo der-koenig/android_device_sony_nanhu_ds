@@ -2,9 +2,3 @@
 ro.sf.lcd_density=160
 
 mobiledata.interfaces=rmnet0,rmnet1
-
-ro.arima.version.sw=1267-9537
-ro.arima.version.sw_revision=2.8.J.3.12
-ro.arima.version.sw_variant=user
-ro.arima.version.sw_type=user
-ro.arima.imeisv=36
