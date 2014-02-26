@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device
 
+PRODUCT_COPY_FILES += \
+    device/sony/nanhu_ds/prebuilt/tad:root/sbin/tad
+
 # Offline charging
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/prebuilt/charger:root/charger \
