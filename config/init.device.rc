@@ -24,3 +24,10 @@ on post-fs-data
     insmod /system/lib/modules/bnep.ko
     insmod /system/lib/modules/hidp.ko
     insmod /system/lib/modules/rfcomm.ko
+
+# SEMC, TA Daemon
+service tad /sbin/tad /dev/block/mmcblk0p2 0,16,256
+    class trimarea
+    user root
+    group root
+    socket tad stream 0660 system system
