@@ -80,4 +80,8 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
     device/sony/nanhu_ds/config/cy8ctma340_touch.kl:system/usr/keylayout/cy8ctma340_touch.kl
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril.v3=skipnullaid,qcomdsds \
+    persist.multisim.config=dsds
+
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
