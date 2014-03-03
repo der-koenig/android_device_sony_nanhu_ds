@@ -82,6 +82,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.v3=skipnullaid,qcomdsds \
-    persist.multisim.config=dsds
+    persist.multisim.config=dsds \
+    ro.webview.gralloc_unbind=1
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
