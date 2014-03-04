@@ -31,3 +31,8 @@ service tad /sbin/tad /dev/block/mmcblk0p2 0,16,256
     user root
     group root
     socket tad stream 0660 system system
+
+service dhcpcd_bnep /system/bin/dhcpcd -BKLG
+    class late_start
+    disabled
+    oneshot
