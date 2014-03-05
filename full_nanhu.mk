@@ -28,12 +28,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Charging animation resources
 $(call inherit-product, device/sony/tamsui-common/prebuilt/resources-mdpi.mk)
 
-# Inherit from nanhu_ds device
-$(call inherit-product, device/sony/nanhu_ds/nanhu_ds.mk)
+# Inherit from nanhu device
+$(call inherit-product, device/sony/nanhu/nanhu.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_nanhu_ds
-PRODUCT_DEVICE := nanhu_ds
+PRODUCT_NAME := full_nanhu
+PRODUCT_DEVICE := nanhu
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia E dual
+PRODUCT_MODEL := Xperia E

@@ -1,4 +1,4 @@
-$(call inherit-product, device/sony/nanhu_ds/full_nanhu_ds.mk)
+$(call inherit-product, device/sony/nanhu/full_nanhu.mk)
 
 # Inherit CM common GSM stuff.
 $(call inherit-product, vendor/cm/config/gsm.mk)
@@ -11,5 +11,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C1604_1270-7235 BUILD_FINGERPRINT=S
 TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 320
 
-PRODUCT_NAME := cm_nanhu_ds
-PRODUCT_DEVICE := nanhu_ds
+PRODUCT_NAME := cm_nanhu
+PRODUCT_DEVICE := nanhu
