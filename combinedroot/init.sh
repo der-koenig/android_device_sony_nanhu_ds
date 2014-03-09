@@ -66,6 +66,8 @@ then
 	busybox pkill -f "busybox cat ${BOOTREC_EVENT}"
 fi
 
+busybox echo 0 > ${BOOTREC_BUTTON_BACKLIGHT}
+
 # unpack the ramdisk image
 busybox cpio -i < ${load_image}
 
