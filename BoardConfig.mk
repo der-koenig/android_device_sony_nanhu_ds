@@ -60,8 +60,8 @@ TARGET_OTA_ASSERT_DEVICE := C1504,C1505,C1604,C1605,nanhu,nanhu_ds
 -PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 
 KERNEL_BT_MODULES:
-	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../out/target/product/nanhu/obj/KERNEL_OBJ KLIB_BUILD=../../out/target/product/nanhu/obj/KERNEL_OBJ defconfig-nanhu-bt
-	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../out/target/product/nanhu/obj/KERNEL_OBJ KLIB_BUILD=../../out/target/product/nanhu/obj/KERNEL_OBJ
+	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../$(KERNEL_OUT) KLIB_BUILD=../../$(KERNEL_OUT) defconfig-nanhu-bt
+	make -C kernel/backports ARCH=arm CROSS_COMPILE="arm-eabi-" KLIB=../../$(KERNEL_OUT) KLIB_BUILD=../../$(KERNEL_OUT)
 	mv kernel/backports/compat/compat.ko $(KERNEL_MODULES_OUT)
 	mv kernel/backports/net/bluetooth/bluetooth.ko $(KERNEL_MODULES_OUT)
 	mv kernel/backports/net/bluetooth/rfcomm/rfcomm.ko $(KERNEL_MODULES_OUT)
