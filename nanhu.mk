@@ -25,6 +25,10 @@ $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
+PRODUCT_PACKAGES += \
+    FM \
+    init.qcom.fm.sh
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -91,6 +95,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.v3=skipnullaid,qcomdsds \
-    ro.webview.gralloc_unbind=1
+    ro.webview.gralloc_unbind=1 \
+    ro.fm.analogpath.supported=true \
+    ro.fm.mulinst.recording.support=false
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
