@@ -6,7 +6,7 @@
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/nanhu/include
 
-TARGET_KERNEL_SOURCE := kernel/sony/nanhu_ds
+TARGET_KERNEL_SOURCE := kernel/sony/nanhu
 TARGET_KERNEL_CONFIG := cm_nanhu_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/nanhu/config/cmdline.txt
 
