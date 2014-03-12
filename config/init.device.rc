@@ -25,6 +25,25 @@ on post-fs-data
     insmod /system/lib/modules/hidp.ko
     insmod /system/lib/modules/rfcomm.ko
 
+on early-charger
+    wait /dev/block/mmcblk0p2
+    start tad
+    exec /sbin/wait4tad
+    start rmt_storage
+    start ta_rmt_service
+
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 0FCE
+    write /sys/class/android_usb/android0/idProduct E188
+    write /sys/class/android_usb/android0/functions mass_storage
+    write /sys/class/android_usb/android0/enable 1
+
+on charger
+    start charger
+
+service charger /charger
+    class charger
+
 # SEMC, TA Daemon
 service tad /sbin/tad /dev/block/mmcblk0p2 0,16,256
     class trimarea
