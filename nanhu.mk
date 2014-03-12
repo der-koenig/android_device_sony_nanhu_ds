@@ -60,7 +60,9 @@ PRODUCT_PACKAGES += \
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
-    device/sony/nanhu/recovery/bootrec-device:recovery/bootrec-device
+    device/sony/nanhu/recovery/bootrec-device:recovery/bootrec-device \
+    device/sony/nanhu/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
+    device/sony/nanhu/recovery/rebootrecovery.sh:recovery/root/sbin/rebootrecovery.sh
 
 PRODUCT_COPY_FILES += \
     device/sony/nanhu/prebuilt/tad:root/sbin/tad
