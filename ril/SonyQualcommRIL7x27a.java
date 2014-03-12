@@ -441,11 +441,9 @@ public class SonyQualcommRIL7x27a extends RIL implements CommandsInterface {
                             Log.d(LOG_TAG, "This is a GSM PHONE " + appIndex);
                         }
 
-                        if (mPhoneType == RILConstants.CDMA_PHONE) {
-                            if (appIndex == -1) {
-                                Log.w(LOG_TAG, "App index is " + appIndex + ", skipping event handling");
-                                break;
-                            }
+                        if (appIndex == -1) {
+                            Log.w(LOG_TAG, "App index is " + appIndex + ", skipping event handling");
+                            break;
                         }
 
                         IccCardApplicationStatus application = status.mApplications[appIndex];
