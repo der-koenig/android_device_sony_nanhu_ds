@@ -54,8 +54,6 @@ then
 	then
 		busybox echo 'RECOVERY BOOT' >>boot.txt
 		busybox rm -fr /cache/recovery/boot
-		# trigger orange notification bar
-		busybox echo ${BOOTREC_LED_ORANGE} > ${BOOTREC_CONTROL_LED}
 		# recovery ramdisk
 		load_image=/sbin/ramdisk-recovery.cpio
 	else
