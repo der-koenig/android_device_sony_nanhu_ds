@@ -1,8 +1,0 @@
-# mount point	fstype		device			[device2]   fstype2
-
-/boot		emmc		/dev/block/mmcblk0p3
-/system		ext4		/dev/block/mmcblk0p11
-/cache		ext4		/dev/block/mmcblk0p12
-/data		ext4		/dev/block/mmcblk0p16	length=-16384
-/sdcard		vfat		/dev/block/mmcblk0p17   flags=storage;settingsstorage;backup=1;wipeingui;display="Internal storage"
-/external_sd	vfat		/dev/block/mmcblk1p1	flags=storage;backup=0;wipeingui;display="microSD card"
